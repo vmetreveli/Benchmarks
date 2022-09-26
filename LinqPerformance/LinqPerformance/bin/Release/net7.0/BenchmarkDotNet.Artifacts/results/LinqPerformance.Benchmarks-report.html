@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>LinqPerformance.Benchmarks-20220926-143426</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.2, OS=macOS Monterey 12.6 (21G115) [Darwin 21.6.0]
+Intel Xeon CPU E5-1620 v2 3.70GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=7.0.100-preview.7.22377.5
+  [Host]   : .NET 7.0.0 (7.0.22.37506), X64 RyuJIT AVX
+  .NET 6.0 : .NET 6.0.8 (6.0.822.36306), X64 RyuJIT AVX
+  .NET 7.0 : .NET 7.0.0 (7.0.22.37506), X64 RyuJIT AVX
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Job</th><th>Runtime</th><th>Size</th><th> Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Min</td><td>.NET 6.0</td><td>.NET 6.0</td><td>100</td><td>714.93 ns</td><td>30.448 ns</td><td>86.375 ns</td><td>693.54 ns</td><td>32 B</td>
+</tr><tr><td>Max</td><td>.NET 6.0</td><td>.NET 6.0</td><td>100</td><td>637.35 ns</td><td>14.319 ns</td><td>40.854 ns</td><td>626.72 ns</td><td>32 B</td>
+</tr><tr><td>Average</td><td>.NET 6.0</td><td>.NET 6.0</td><td>100</td><td>739.66 ns</td><td>55.337 ns</td><td>153.339 ns</td><td>680.22 ns</td><td>32 B</td>
+</tr><tr><td>Sum</td><td>.NET 6.0</td><td>.NET 6.0</td><td>100</td><td>608.12 ns</td><td>12.022 ns</td><td>12.345 ns</td><td>604.11 ns</td><td>32 B</td>
+</tr><tr><td>OrderBy</td><td>.NET 6.0</td><td>.NET 6.0</td><td>100</td><td>4,852.11 ns</td><td>78.533 ns</td><td>69.618 ns</td><td>4,820.91 ns</td><td>1512 B</td>
+</tr><tr><td>Min</td><td>.NET 7.0</td><td>.NET 7.0</td><td>100</td><td>33.20 ns</td><td>0.694 ns</td><td>1.337 ns</td><td>32.82 ns</td><td>-</td>
+</tr><tr><td>Max</td><td>.NET 7.0</td><td>.NET 7.0</td><td>100</td><td>30.52 ns</td><td>0.549 ns</td><td>0.486 ns</td><td>30.45 ns</td><td>-</td>
+</tr><tr><td>Average</td><td>.NET 7.0</td><td>.NET 7.0</td><td>100</td><td>39.50 ns</td><td>2.264 ns</td><td>6.083 ns</td><td>37.03 ns</td><td>-</td>
+</tr><tr><td>Sum</td><td>.NET 7.0</td><td>.NET 7.0</td><td>100</td><td>64.71 ns</td><td>0.208 ns</td><td>0.174 ns</td><td>64.71 ns</td><td>-</td>
+</tr><tr><td>OrderBy</td><td>.NET 7.0</td><td>.NET 7.0</td><td>100</td><td>6,626.29 ns</td><td>356.947 ns</td><td>1,000.917 ns</td><td>6,329.06 ns</td><td>1512 B</td>
+</tr></tbody></table>
+</body>
+</html>
